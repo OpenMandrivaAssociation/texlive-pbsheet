@@ -1,4 +1,4 @@
-# revision 15878
+# revision 24830
 # category Package
 # catalog-ctan /macros/latex/contrib/pbsheet
 # catalog-date 2007-01-12 23:55:10 +0100
@@ -6,7 +6,7 @@
 # catalog-version 0.1
 Name:		texlive-pbsheet
 Version:	0.1
-Release:	1
+Release:	2
 Summary:	Problem sheet class
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pbsheet
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 This class is designed to simplify the typesetting of problem
@@ -29,19 +26,19 @@ currently customised towards teaching in French (and the
 examples are in French).
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -50,7 +47,6 @@ examples are in French).
 %doc %{_texmfdistdir}/doc/latex/pbsheet/LPPL
 %doc %{_texmfdistdir}/doc/latex/pbsheet/README
 %doc %{_texmfdistdir}/doc/latex/pbsheet/pbsheet.pdf
-%doc %{_texmfdistdir}/doc/latex/pbsheet/pbsheet.ps
 %doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/GNUmakefile
 %doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/img/simbin.eps
 %doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/img/simbin.pdf
@@ -60,7 +56,9 @@ examples are in French).
 %doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/pgm/rint.m
 %doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/pgm/simbin.m
 %doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/xpl-fr.bib
+%doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/xpl-fr.dvi
 %doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/xpl-fr.pdf
+%doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/xpl-fr.ps
 %doc %{_texmfdistdir}/doc/latex/pbsheet/xpl/xpl-fr.tex
 #- source
 %doc %{_texmfdistdir}/source/latex/pbsheet/pbsheet.dtx
