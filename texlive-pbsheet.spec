@@ -19,6 +19,8 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
+%define		_unpackaged_subdirs_terminate_build	0
+
 %description
 This class is designed to simplify the typesetting of problem
 sheets with Mathematics and Computer Science content. It is
