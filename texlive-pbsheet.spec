@@ -27,16 +27,8 @@ sheets with Mathematics and Computer Science content. It is
 currently customised towards teaching in French (and the
 examples are in French).
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -65,7 +57,6 @@ examples are in French).
 #- source
 %doc %{_texmfdistdir}/source/latex/pbsheet/pbsheet.dtx
 %doc %{_texmfdistdir}/source/latex/pbsheet/pbsheet.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -76,5 +67,3 @@ examples are in French).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
