@@ -67,3 +67,22 @@ examples are in French).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1-3
++ Revision: 754727
+- Rebuild to reduce used resources
+
+* Sat Dec 17 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-2
++ Revision: 743345
+- texlive-pbsheet
+- texlive-pbsheet
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-1
++ Revision: 719212
+- texlive-pbsheet
+- texlive-pbsheet
+- texlive-pbsheet
+- texlive-pbsheet
+
