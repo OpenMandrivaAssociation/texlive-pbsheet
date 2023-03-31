@@ -1,6 +1,6 @@
 Name:		texlive-pbsheet
 Version:	24830
-Release:	1
+Release:	2
 Summary:	Problem sheet class
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pbsheet
