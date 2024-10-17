@@ -3,7 +3,7 @@ Version:	24830
 Release:	2
 Summary:	Problem sheet class
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pbsheet
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pbsheet
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pbsheet.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pbsheet.doc.r%{version}.tar.xz
